@@ -6,7 +6,7 @@ const Header = () => {
 	return (
 		<HeaderDiv>
 			<Nav />
-			<h1>header</h1>
+			<h1>We are SnowBall. We selling bet snowballs in the world.</h1>
 		</HeaderDiv>
 	);
 };
@@ -14,12 +14,16 @@ const Header = () => {
 const HeaderDiv = Styled.div`
 	background-image: url(${BgImg});
 	width: 100%;
-    height: 40rem;
+    height: 778px;
     background-repeat: no-repeat;
-    background-size:cover;
     background-attachment:fixed;
     position:relative;
     z-index: 0;
+    h1{
+        display:flex;
+        ustify-content: center;
+        text-align: center;
+    }
 `;
 
 export default Header;
