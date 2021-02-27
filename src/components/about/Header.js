@@ -8,10 +8,12 @@ const Header = () => {
 	return (
 		<HeaderDiv>
 			<ContainerDiv>
-				<Nav />
-				<Cart>
-					<img src={EmptyCart} alt="" />
-				</Cart>
+				<HeaderMenu>
+					<Nav />
+					<Cart>
+						<img src={EmptyCart} alt="" />
+					</Cart>
+				</HeaderMenu>
 			</ContainerDiv>
 			<Line />
 			<h1>We are SnowBall. We selling bet snowballs in the world.</h1>
@@ -37,19 +39,22 @@ const HeaderDiv = Styled.div`
 const ContainerDiv = Styled.div`
 width: 1200px;
 margin: 0 auto;
-display:flex;
-justify-content: space-between;
 `;
 const Line = Styled.div`
-	color: #929292;
 	border-bottom: 1px solid #929292;
 `;
 
 const Cart = Styled.div`
-padding: 2rem 5rem;
+padding: 1em;
 img{
     width: 2em;
 }
+`;
+
+const HeaderMenu = Styled.div`
+width: 100%;
+display:flex;
+justify-content: space-between;
 `;
 
 export default Header;
