@@ -4,24 +4,26 @@ const Nav = () => {
 	return (
 		<NavDiv>
 			<h1>SnowBall</h1>
-			<NavUl>
+			<ul>
 				<li>About</li>
 				<li>Our Store</li>
 				<li>Contact Us</li>
-			</NavUl>
+			</ul>
 		</NavDiv>
 	);
 };
 
 const NavDiv = Styled.div`
-top: 5rem;
-color: white;
-`;
+	display: flex;
+	padding: 2rem 5rem;
+	width: 100%;
 
-const NavUl = Styled.ul`
-list-style:none;
-display: flex;
-padding: 2rem 5rem;
+	ul{
+	list-style:none;
+	li{
+		list-decoration: none;
+	}
+	}
 `;
 
 export default Nav;
