@@ -3,10 +3,12 @@ import Styled from "styled-components";
 const Nav = () => {
 	return (
 		<NavDiv>
-			<h2>SnowBall</h2>
 			<ul>
 				<li>
 					<a href="#">About</a>
+				</li>
+				<li>
+					<a href="#">Services</a>
 				</li>
 				<li>
 					<a href="#">Our Store</a>
@@ -20,18 +22,14 @@ const Nav = () => {
 };
 
 const NavDiv = Styled.div`
-overflow: hidden;
-position: relative;
+	overflow: hidden;
+	position: relative;
 	display:flex;
 	width: 100%;
-	text-align: center;
-	h2{
-		padding: 1em;
-	}
+	justify-content: center;
 	ul{
 		display: flex;
-	list-style:none;
-	justify-content: center;
+		list-style:none;
 	li{
 		display: flex;
 		list-decoration: none;
@@ -45,7 +43,7 @@ position: relative;
 		padding: .7rem 2rem;
 	}
 	a:hover{
-		background:  black;
+		background: black;
 		color: white;
 	}
 	}
