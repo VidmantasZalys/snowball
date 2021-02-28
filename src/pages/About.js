@@ -5,7 +5,7 @@ import ContactUs from "../components/about/ContactUs";
 const About = () => {
 	return (
 		<>
-			<Header />;
+			<Header />
 			<Services />
 			<ContactUs />
 		</>

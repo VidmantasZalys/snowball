@@ -41,10 +41,12 @@ const NavDiv = Styled.div`
 		color:  black;
 		text-decoration: none;
 		padding: .7rem 2rem;
+		cursor: pointer;
 	}
 	a:hover{
 		background: black;
 		color: white;
+		cursor: pointer;
 	}
 	}
 `;

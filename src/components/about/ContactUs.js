@@ -4,12 +4,12 @@ const ContactUs = () => {
 	return (
 		<ContactUsDiv>
 			<ContainerDiv>
+				<h1>Contact Us</h1>
 				<ContactUsContent>
-					<h1>Contact Us</h1>
 					<LeftCol>
 						<form action="" method="post">
 							<label htmlFor="name">Name</label>
-							<input type="text" name="name" id="" />
+							<input type="text" name="name" id="" text="Name" />
 							<label htmlFor="email">Email</label>
 							<input type="text" name="email" id="" />
 							<textarea name="emailText" id="" cols="30" rows="10"></textarea>
@@ -24,7 +24,12 @@ const ContactUs = () => {
 };
 
 const ContactUsDiv = Styled.div`
-background: #dfe1ed;
+background: #323347;
+color: white;
+h1{
+    width: 100%;
+    padding: 1em;
+}
 `;
 
 const ContainerDiv = Styled.div`
@@ -35,19 +40,50 @@ margin: 0 auto;
 
 const ContactUsContent = Styled.div`
 display:flex;
+padding-bottom: 5em;
 `;
 const LeftCol = Styled.div`
 width: 50%;
-margin: 12em 3em 0 5em;
+margin: 3em 3em 0 5em;
 form{
     display: block;
-}
-
+    button{
+        border: 1px solid #4f4d65;
+		border-radius: 20px;
+		color:  white;
+		padding: .7rem 2rem;
+        background: none;
+        cursor: pointer;
+        display: block;
+        margin-top: 2em;
+    
+    }
+    label{
+        margin-top: 2em;
+    }
+    input{
+        display: block;
+        border: 1px solid #4f4d65;
+        color: white;
+        background:none;
+        padding: 1em;
+        margin-top: 2em;
+        width: 100%;
+    }
+    textarea{
+        display: block;
+        border: 1px solid #4f4d65;
+        color: white;
+        background:none;
+        padding: 1em;
+        margin-top: 2em;
+        width: 100%;
+    }
 }
 `;
 const RightCol = Styled.div`
 width: 50%;
-margin: 12em 3em 0 5em;
+margin: 3em 3em 0 5em;
 }
 `;
 
