@@ -56,11 +56,10 @@ const Header = () => {
 };
 
 const HeaderDiv = Styled.div`
-	background-image: url(${BgImg});
+	background: url(${BgImg});
 	width: 100%;
     height: 778px;
     background-repeat: no-repeat;
-    background-attachment:fixed;
     position:relative;
     z-index: 0;
 `;
