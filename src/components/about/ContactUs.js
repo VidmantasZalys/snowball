@@ -1,4 +1,5 @@
 import Styled from "styled-components";
+import { ContainerDiv } from "../../styles/styles";
 
 const ContactUs = () => {
 	return (
@@ -30,12 +31,6 @@ h1{
     width: 100%;
     padding: 1em;
 }
-`;
-
-const ContainerDiv = Styled.div`
-width: 1200px;
-margin: 0 auto;
-
 `;
 
 const ContactUsContent = Styled.div`

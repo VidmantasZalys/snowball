@@ -3,6 +3,7 @@ import Nav from "../Nav";
 import BgImg from "../../img/mountain_1.jpg";
 import EmptyCart from "../../img/empty_cart.svg";
 import FullCart from "../../img/full_cart.svg";
+import { ContainerDiv } from "../../styles/styles";
 
 const Header = () => {
 	return (
@@ -64,10 +65,6 @@ const HeaderDiv = Styled.div`
     z-index: 0;
 `;
 
-const ContainerDiv = Styled.div`
-width: 1200px;
-margin: 0 auto;
-`;
 const Line = Styled.div`
 	border-bottom: 1px solid #929292;
 `;

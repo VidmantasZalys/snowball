@@ -3,6 +3,7 @@ import SnowBallThr from "../../img/snow_ball_trh.png";
 import Conveyor from "../../img/conveyor.png";
 import Excavator from "../../img/excavator.png";
 import ServicesBg from "../../img/services_bg.png";
+import { ContainerDiv } from "../../styles/styles";
 const Services = () => {
 	return (
 		<ServicesDiv>
@@ -70,8 +71,4 @@ const ServicesDiv = Styled.div`
 }
 `;
 
-const ContainerDiv = Styled.div`
-width: 1200px;
-margin: 0 auto;
-`;
 export default Services;

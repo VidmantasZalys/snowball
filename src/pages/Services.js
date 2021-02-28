@@ -1,7 +1,10 @@
+import HeaderAll from "../components/HeaderAll";
+import ServicesPage from "../components/services/ServicesPage";
+
 const Services = () => {
 	return (
 		<div>
-			<h1>34343</h1>
+			<ServicesPage />
 		</div>
 	);
 };
