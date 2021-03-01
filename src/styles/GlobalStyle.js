@@ -17,7 +17,7 @@ html{
     }
 }
 body{
-    background:#1b1b1b;
+    background:white;
     font-family: 'Inter', sans-serif;
     
 }

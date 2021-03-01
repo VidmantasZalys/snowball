@@ -19,7 +19,7 @@ const HeaderAll = () => {
 const HeaderDiv = Styled.div`
 	background: url(${HeaderAllBg});
 	width: 100%;
-    height: 200px;
+    height: 180px;
     background-repeat: no-repeat;
     position:relative;
     z-index: 0;
