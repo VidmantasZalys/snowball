@@ -1,5 +1,6 @@
 import About from "./pages/About";
 import Services from "./pages/Services";
+import OurStore from "./pages/OurStore";
 import { Route, Switch } from "react-router-dom";
 
 //global styles
@@ -15,6 +16,9 @@ function App() {
 				</Route>
 				<Route path="/services">
 					<Services />
+				</Route>
+				<Route>
+					<OurStore />
 				</Route>
 			</Switch>
 		</>
