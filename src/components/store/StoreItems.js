@@ -6,16 +6,24 @@ const StoreItems = ({ items }) => {
 	return (
 		<>
 			<ContainerDiv>
-				<ul>
+				<ItemsUl>
 					{items.map((item) => (
 						<li>
 							<StoreItem item={item} key={item.id} />
 						</li>
 					))}
-				</ul>
+				</ItemsUl>
 			</ContainerDiv>
 		</>
 	);
 };
 
+const ItemsUl = Styled.div`
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    li{
+        padding: 2em;
+    }
+`;
 export default StoreItems;
