@@ -12,7 +12,6 @@ const HeaderAll = () => {
 					<Nav />
 				</HeaderMenu>
 			</ContainerDiv>
-			<Line />
 		</HeaderDiv>
 	);
 };
@@ -20,14 +19,10 @@ const HeaderAll = () => {
 const HeaderDiv = Styled.div`
 	background: url(${HeaderAllBg});
 	width: 100%;
-    height: 778px;
+    height: 200px;
     background-repeat: no-repeat;
     position:relative;
     z-index: 0;
-`;
-
-const Line = Styled.div`
-	border-bottom: 1px solid #929292;
 `;
 
 const HeaderMenu = Styled.div`
@@ -39,10 +34,6 @@ h1{
 	padding: 1rem;
 	font-family: "Lobster";
 }
-`;
-
-const HeaderContent = Styled.div`
-display:flex;
 `;
 
 export default HeaderAll;
