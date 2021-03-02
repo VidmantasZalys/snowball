@@ -4,7 +4,7 @@ import OurStore from "./pages/OurStore";
 import { Route, Switch } from "react-router-dom";
 import { useState } from "react";
 import { StoreData } from "./data";
-
+import CartShop from "./pages/CartShop";
 //global styles
 import { GlobalStyle } from "./styles/GlobalStyle";
 
@@ -23,6 +23,9 @@ function App() {
 				</Route>
 				<Route path="/ourstore">
 					<OurStore items={items} />
+				</Route>
+				<Route path="/cartshop">
+					<CartShop />
 				</Route>
 			</Switch>
 		</>

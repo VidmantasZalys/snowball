@@ -4,6 +4,7 @@ import BgImg from "../../img/mountain_1.jpg";
 import EmptyCart from "../../img/empty_cart.svg";
 import FullCart from "../../img/full_cart.svg";
 import { ContainerDiv } from "../../styles/styles";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 	return (
@@ -13,7 +14,9 @@ const Header = () => {
 					<h1>SnowBall</h1>
 					<Nav />
 					<Cart>
-						<img src={EmptyCart} alt="" />
+						<Link to="/cartshop">
+							<img src={EmptyCart} alt="" />
+						</Link>
 					</Cart>
 				</HeaderMenu>
 			</ContainerDiv>

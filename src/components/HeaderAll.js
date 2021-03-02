@@ -2,6 +2,9 @@ import Styled from "styled-components";
 import Nav from "./Nav";
 import HeaderAllBg from "../img/headerall_mountain_1.jpg";
 import { ContainerDiv } from "../styles/styles";
+import EmptyCart from "../img/empty_cart.svg";
+import FullCart from "../img/full_cart.svg";
+import { Link } from "react-router-dom";
 
 const HeaderAll = () => {
 	return (
@@ -10,6 +13,11 @@ const HeaderAll = () => {
 				<HeaderMenu>
 					<h1>SnowBall</h1>
 					<Nav />
+					<Cart>
+						<Link to="/cartshop">
+							<img src={EmptyCart} alt="" />
+						</Link>
+					</Cart>
 				</HeaderMenu>
 			</ContainerDiv>
 		</HeaderDiv>
@@ -33,6 +41,12 @@ h1{
 	display:flex;
 	padding: 1rem;
 	font-family: "Lobster";
+}
+`;
+const Cart = Styled.div`
+padding: 1em;
+img{
+    width: 2em;
 }
 `;
 
