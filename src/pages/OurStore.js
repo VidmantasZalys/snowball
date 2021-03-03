@@ -2,12 +2,16 @@ import StoreItems from "../components/store/StoreItems";
 import HeaderAll from "../components/HeaderAll";
 import Styled from "styled-components";
 
-const Services = ({ items }) => {
+const Services = ({ items, setCartItems, cartItems }) => {
 	return (
 		<OurStoreDiv>
 			<HeaderAll />
 			<Line />
-			<StoreItems items={items} />
+			<StoreItems
+				items={items}
+				setCartItems={setCartItems}
+				cartItems={cartItems}
+			/>
 		</OurStoreDiv>
 	);
 };

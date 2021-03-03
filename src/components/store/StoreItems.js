@@ -2,14 +2,19 @@ import Styled from "styled-components";
 import { ContainerDiv } from "../../styles/styles";
 import StoreItem from "./StoreItem";
 
-const StoreItems = ({ items }) => {
+const StoreItems = ({ items, setCartItems, cartItems }) => {
 	return (
 		<>
 			<ContainerDiv>
 				<ItemsUl>
 					{items.map((item) => (
 						<li>
-							<StoreItem item={item} key={item.id} />
+							<StoreItem
+								item={item}
+								key={item.id}
+								setCartItems={setCartItems}
+								cartItems={cartItems}
+							/>
 						</li>
 					))}
 				</ItemsUl>

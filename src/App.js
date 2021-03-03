@@ -10,7 +10,8 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
 	const [items, setItems] = useState(StoreData);
-
+	const [cartItems, setCartItems] = useState([]);
+	console.log(cartItems);
 	return (
 		<>
 			<GlobalStyle />
@@ -22,10 +23,14 @@ function App() {
 					<Services />
 				</Route>
 				<Route path="/ourstore">
-					<OurStore items={items} />
+					<OurStore
+						items={items}
+						setCartItems={setCartItems}
+						cartItems={cartItems}
+					/>
 				</Route>
 				<Route path="/cartshop">
-					<CartShop />
+					<CartShop cartItems={cartItems} setCartItems={setCartItems} />
 				</Route>
 			</Switch>
 		</>

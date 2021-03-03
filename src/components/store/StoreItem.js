@@ -1,13 +1,27 @@
 import Styled from "styled-components";
 
-const StoreItem = ({ item }) => {
+const StoreItem = ({ item, setCartItems, cartItems }) => {
+	const addItems = () => {
+		setCartItems([
+			...cartItems,
+			{
+				itemImg: item.img,
+				itemName: item.itemName,
+				itemPrice: item.price,
+				itemId: item.id,
+			},
+		]);
+
+		//setCartItems(item.img);
+		//console.log(cartItems);
+	};
 	return (
 		<ItemBlock>
 			<img src={item.img} alt={item.itemName} />
 			<h2>{item.itemName}</h2>
 			<p>{item.desc}</p>
 			<h3>{item.price} Eur</h3>
-			<button>Buy</button>
+			<button onClick={addItems}>Buy</button>
 			<button>More Info</button>
 		</ItemBlock>
 	);

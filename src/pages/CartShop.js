@@ -1,10 +1,11 @@
 import HeaderAll from "../components/HeaderAll";
+import CartItemsList from "../components/cart/CartItemsList";
 
-const CartShop = () => {
+const CartShop = ({ cartItems, setCartItems }) => {
 	return (
 		<div>
 			<HeaderAll />
-			Cart shop
+			<CartItemsList cartItems={cartItems} setCartItems={setCartItems} />
 		</div>
 	);
 };
