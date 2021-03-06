@@ -5,12 +5,15 @@ import StoreItem from "./StoreItem";
 import { useEffect } from "react";
 
 const StoreItems = ({ items, setCartItems, cartItems }) => {
-	console.log(typeof cartItems);
+	/* 	//console.log(typeof cartItems);
 	useEffect(() => {
 		console.log("kazkas pasikeite cartItems");
 		console.log(cartItems);
-	}, [cartItems]);
-
+	}, [cartItems]); */
+	setCartItems((state) => {
+		console.log(state);
+		return state;
+	});
 	return (
 		<>
 			<ContainerDiv>

@@ -4,10 +4,15 @@ import { useEffect } from "react";
 const CartItemsList = ({ cartItems, setCartItems }) => {
 	console.log(`ccc ${cartItems}`);
 	//console.log(typeof cartItems);
-	useEffect(() => {
+	/* 	useEffect(() => {
 		console.log("kazkas pasikeite cartItemsList");
 		//console.log(cartItem);
-	}, [cartItems]);
+	}, [cartItems]); */
+
+	setCartItems((state) => {
+		console.log(state);
+		return state;
+	});
 	return (
 		<div>
 			{cartItems.map((cartItem) => {

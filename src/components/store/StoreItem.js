@@ -2,15 +2,7 @@ import Styled from "styled-components";
 
 const StoreItem = ({ item, setCartItems, cartItems }) => {
 	const addItems = () => {
-		setCartItems([
-			...cartItems,
-			{
-				itemImg: item.img,
-				itemName: item.itemName,
-				itemPrice: item.price,
-				itemId: item.id,
-			},
-		]);
+		setCartItems(["cbb is store"]);
 
 		//setCartItems(item.img);
 		//console.log(cartItems);
