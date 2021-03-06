@@ -21,7 +21,7 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 			<h2>{item.itemName}</h2>
 			<p>{item.desc}</p>
 			<h3>{item.price} Eur</h3>
-			<button onClick={addItems}>Buy</button>
+			<button onClick={() => addItems()}>Buy</button>
 			<button>More Info</button>
 		</ItemBlock>
 	);

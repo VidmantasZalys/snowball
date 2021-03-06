@@ -2,7 +2,15 @@ import Styled from "styled-components";
 import { ContainerDiv } from "../../styles/styles";
 import StoreItem from "./StoreItem";
 
+import { useEffect } from "react";
+
 const StoreItems = ({ items, setCartItems, cartItems }) => {
+	console.log(typeof cartItems);
+	useEffect(() => {
+		console.log("kazkas pasikeite cartItems");
+		console.log(cartItems);
+	}, [cartItems]);
+
 	return (
 		<>
 			<ContainerDiv>
