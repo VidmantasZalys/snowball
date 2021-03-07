@@ -5,8 +5,12 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 		setCartItems([
 			...cartItems,
 			{
+				itemImg: item.img,
 				itemName: item.itemName,
-				itemdesc: item.desc,
+				itemPrice: item.price,
+				itemDesc: item.Desc,
+				itemQnt: 1,
+				itemId: item.id,
 			},
 		]);
 

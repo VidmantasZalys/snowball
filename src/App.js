@@ -1,5 +1,5 @@
 import About from "./pages/About";
-//import Services from "./pages/Services";
+import Services from "./pages/Services";
 import OurStore from "./pages/OurStore";
 import { Route, Switch } from "react-router-dom";
 import { useState } from "react";
@@ -10,7 +10,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
 	const [items, setItems] = useState(StoreData);
-	const [cartItems, setCartItems] = useState(["cbbb1", "cbbb2", "cbbb4"]);
+	const [cartItems, setCartItems] = useState([]);
 	return (
 		<>
 			<GlobalStyle />
@@ -18,9 +18,9 @@ function App() {
 				<Route path="/" exact>
 					<About />
 				</Route>
-				{/* 		<Route path="/services">
+				<Route path="/services">
 					<Services />
-				</Route> */}
+				</Route>
 				<Route path="/ourstore">
 					<OurStore
 						items={items}
