@@ -2,18 +2,41 @@ import Styled from "styled-components";
 
 const StoreItem = ({ item, setCartItems, cartItems }) => {
 	const addItems = () => {
-		setCartItems([
-			...cartItems,
-			{
-				itemImg: item.img,
-				itemName: item.itemName,
-				itemPrice: item.price,
-				itemDesc: item.Desc,
-				itemQnt: 1,
-				itemId: item.id,
-			},
-		]);
+		let qnt = 0;
 
+		cartItems.filter((cartItem) => {
+			//console.log(cartItem.itemId);
+
+			if (cartItem.itemId === "mhm") {
+				//setCartItems([{ ...cartItem, vnt: qnt++ }]);
+				setCartItems((prevState) => [
+					...prevState,
+					{ ...cartItem, vnt: qnt++ },
+				]);
+			}
+
+			console.log(cartItem);
+			/* if (cartItem.id !== item.id) {
+				console.log(item.id);
+			} else {
+				setCartItems([
+					...cartItems,
+					{
+						itemImg: item.img,
+						itemName: item.itemName,
+						itemPrice: item.price,
+						itemDesc: item.Desc,
+						itemQnt: 1,
+						itemId: item.id,
+					},
+				]);
+			} */
+		});
+
+		setCartItems((state) => {
+			console.log(state);
+			return state;
+		});
 		//setCartItems(item.img);
 		//console.log(cartItems);
 	};
@@ -33,7 +56,6 @@ const ItemBlock = Styled.div`
 
     width:300px;
     height: 350px;
-    background: white;
     border-radius: 20px;
     border: 1px solid #323347;
     text-align: center;
