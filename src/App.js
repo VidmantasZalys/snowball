@@ -1,5 +1,5 @@
 import About from "./pages/About";
-import Services from "./pages/Services";
+//import Services from "./pages/Services";
 import OurStore from "./pages/OurStore";
 import { Route, Switch } from "react-router-dom";
 import { useState } from "react";
@@ -18,9 +18,9 @@ function App() {
 				<Route path="/" exact>
 					<About />
 				</Route>
-				<Route path="/services">
+				{/* 		<Route path="/services">
 					<Services />
-				</Route>
+				</Route> */}
 				<Route path="/ourstore">
 					<OurStore
 						items={items}

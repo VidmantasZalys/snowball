@@ -9,15 +9,19 @@ const CartItemsList = ({ cartItems, setCartItems }) => {
 		//console.log(cartItem);
 	}, [cartItems]); */
 
+	cartItems.map((cartItem) => {
+		console.log(cartItem);
+	});
+
 	setCartItems((state) => {
 		console.log(state);
 		return state;
 	});
 	return (
 		<div>
-			{cartItems.map((cartItem) => {
-				<CartItem cartItem={cartItem} />;
-			})}
+			{cartItems.map((cartItem) => (
+				<CartItem cartItem={cartItem} />
+			))}
 		</div>
 	);
 };

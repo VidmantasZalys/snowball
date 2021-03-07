@@ -10,10 +10,10 @@ const StoreItems = ({ items, setCartItems, cartItems }) => {
 		console.log("kazkas pasikeite cartItems");
 		console.log(cartItems);
 	}, [cartItems]); */
-	setCartItems((state) => {
+	/* 	setCartItems((state) => {
 		console.log(state);
 		return state;
-	});
+	}); */
 	return (
 		<>
 			<ContainerDiv>

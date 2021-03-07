@@ -3,6 +3,10 @@ import HeaderAll from "../components/HeaderAll";
 import Styled from "styled-components";
 
 const Services = ({ items, setCartItems, cartItems }) => {
+	setCartItems((state) => {
+		console.log(state);
+		return state;
+	});
 	return (
 		<OurStoreDiv>
 			<HeaderAll />
