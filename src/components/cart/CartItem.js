@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Styled from "styled-components";
+import Remove from "../../img/delete.svg";
 
 const CartItem = ({ cartItem }) => {
 	/* 	console.log(`ccc ${cartItem}`);
@@ -18,7 +19,7 @@ const CartItem = ({ cartItem }) => {
 		<CartItems>
 			<CartItemInfo>1.</CartItemInfo>
 			<CartItemInfo>
-				<img src={cartItem.itemImg} alt={cartItem.itemName} />
+				<CartItemImg src={cartItem.itemImg} alt={cartItem.itemName} />
 			</CartItemInfo>
 			<CartItemInfo>
 				<h3>{cartItem.itemName}</h3>
@@ -27,8 +28,11 @@ const CartItem = ({ cartItem }) => {
 			<CartItemInfo>
 				<input type="number" min="0" value="1" />
 			</CartItemInfo>
-			<CartItemInfo>{cartItem.itemPrice}</CartItemInfo>
+			<CartItemInfo>{cartItem.itemPrice} Eur</CartItemInfo>
 			<CartItemInfo>0</CartItemInfo>
+			<CartItemInfo>
+				<RemoveImg src={Remove} alt="Remove" />
+			</CartItemInfo>
 		</CartItems>
 	);
 };
@@ -41,6 +45,11 @@ border-top: 1px solid #4f4d65;
 
 const CartItemInfo = Styled.div`
 padding: 1em 0em 1em 0em;
+width: 14%;
+p{
+	font-size: 8pt;
+	text-align: left;
+}
 input{
 	padding: 0.5em 0.5em;
 	font-size: 12pt;
@@ -48,13 +57,16 @@ input{
 	margin:0;
 	border-radius: 20px;
 	outline: none;
+	width: 50%;
 }
-img{
+
+`;
+const CartItemImg = Styled.img`
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
-}
-
-
+`;
+const RemoveImg = Styled.img`
+width: 20%;
 `;
 export default CartItem;

@@ -23,12 +23,13 @@ const CartItemsList = ({ cartItems, setCartItems }) => {
 		<div>
 			<ContainerDiv>
 				<ColumnNames>
-					<label></label>
+					<label>No.</label>
 					<label>Item Pic</label>
 					<label>Item name</label>
 					<label>Quantity</label>
 					<label>Price</label>
 					<label>Total</label>
+					<label>Action</label>
 				</ColumnNames>
 				{cartItems.map((cartItem) => (
 					<CartItem cartItem={cartItem} />
@@ -44,6 +45,9 @@ margin-top: 3em;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
+	label{
+		width: 14%;
+	}
 	
 `;
 export default CartItemsList;
