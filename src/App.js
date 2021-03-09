@@ -10,10 +10,11 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
 	const [items, setItems] = useState(StoreData);
-	const [cartItems, setCartItems] = useState([
-		{ itemId: "mhm", vnt: 0 },
-		{ itemId: "mh", vnt: 1 },
-	]);
+	/* 	let [cartItems, setCartItems] = useState([
+		{ itemId: "mhm", vnt: 3 },
+		{ itemId: "mh", vnt: 4 },
+	]); */
+	let [cartItems, setCartItems] = useState([]);
 	return (
 		<>
 			<GlobalStyle />

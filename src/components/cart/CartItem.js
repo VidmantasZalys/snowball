@@ -26,7 +26,7 @@ const CartItem = ({ cartItem }) => {
 				<p>{cartItem.itemDesc}</p>
 			</CartItemInfo>
 			<CartItemInfo>
-				<input type="number" min="0" value="1" />
+				<input type="number" min="0" value={cartItem.itemQnt} />
 			</CartItemInfo>
 			<CartItemInfo>{cartItem.itemPrice} Eur</CartItemInfo>
 			<CartItemInfo>0</CartItemInfo>
