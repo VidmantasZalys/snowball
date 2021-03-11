@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 const HeaderAll = ({ cartItems, cartItemSize }) => {
 	console.log(cartItems);
 	const [cartImg, setCartImg] = useState(EmptyCart);
+	const [cartSize, setCartSize] = useState(cartItems.length);
 
 	/* 	const cartCheck = (icon) => {
 		console.log("cart is not emty");
@@ -17,7 +18,11 @@ const HeaderAll = ({ cartItems, cartItemSize }) => {
 	}; */
 
 	useEffect(() => {
-		setCartImg(FullCart);
+		if (cartItems.length != 0) {
+			setCartImg(FullCart);
+			setCartSize(cartItems.length);
+		}
+
 		//console.log("cxcxc");
 	}, [cartItems]);
 
@@ -30,6 +35,7 @@ const HeaderAll = ({ cartItems, cartItemSize }) => {
 					<Cart>
 						<Link to="/cartshop">
 							<img src={cartImg} alt="" />
+							<span>{cartSize}</span>
 						</Link>
 					</Cart>
 				</HeaderMenu>
@@ -61,7 +67,19 @@ const Cart = Styled.div`
 padding: 1em;
 img{
     width: 2em;
+	z-index: 0;
 }
+span{
+	width:25px;
+	height: 25px;
+	z-index: 1;
+	position: absolute;
+	background: black;
+	color: white;
+	padding: 3px;
+	border-radius: 50%;
+	text-align: center;
+	}
 `;
 
 export default HeaderAll;
