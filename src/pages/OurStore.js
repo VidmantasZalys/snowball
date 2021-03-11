@@ -9,7 +9,7 @@ const Services = ({ items, setCartItems, cartItems }) => {
 	}); */
 	return (
 		<OurStoreDiv>
-			<HeaderAll />
+			<HeaderAll cartItems={cartItems} />
 			<Line />
 			<StoreItems
 				items={items}

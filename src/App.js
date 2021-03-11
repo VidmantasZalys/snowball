@@ -14,7 +14,11 @@ function App() {
 		{ itemId: "mhm", vnt: 3 },
 		{ itemId: "mh", vnt: 4 },
 	]); */
-	let [cartItems, setCartItems] = useState([]);
+	const [cartItems, setCartItems] = useState([]);
+	//const [cartItemSize, setCartItemSize] = useState(0);
+	//setCartItemSize(cartItems.length);
+
+	//console.log(cartItemSize);
 	return (
 		<>
 			<GlobalStyle />

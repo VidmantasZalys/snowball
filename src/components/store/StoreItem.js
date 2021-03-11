@@ -4,31 +4,31 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 	const addItems = () => {
 		let qnt = 0;
 
-		cartItems.filter((cartItem, index) => {
-			/* 			setCartItems((prevState) => {
+		//cartItems.filter((cartItem, index) => {
+		/* 			setCartItems((prevState) => {
 				if (prevState[index] === "mhm") {
 					prevState[index].vnt = "";
 				}
 			});
  */
-			/* 			setCartItems((prevState) => {
+		/* 			setCartItems((prevState) => {
 				//console.log(prevState[index].itemId);
 				if (prevState[index].itemId === "mhm") {
 					prevState[index].vnt++;
 				}
 				return prevState;
 			}); */
-			//console.log(cartItem.itemId);
-			//if (cartItem.itemId === "mhm") {
-			//setCartItems([{ ...cartItem, vnt: qnt++ }, ...cartItems]);
-			/* 				setCartItems((prevState) => [
+		//console.log(cartItem.itemId);
+		//if (cartItem.itemId === "mhm") {
+		//setCartItems([{ ...cartItem, vnt: qnt++ }, ...cartItems]);
+		/* 				setCartItems((prevState) => [
 					...prevState,
 					{ ...cartItem, vnt: qnt++ },
 				]); */
-			//console.log(index);
-			//}
-			//console.log(cartItem);
-			/* 		if (cartItem.id !== item.id) {
+		//console.log(index);
+		//}
+		//console.log(cartItem);
+		/* 		if (cartItem.id !== item.id) {
 				setCartItems([...cartItems, { ...cartItem, itemQnt: qnt++ }]);
 			} else {
 				setCartItems([
@@ -43,7 +43,7 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 					},
 				]);
 			} */
-		});
+		//});
 		//console.log(cartItems.length);
 
 		if (cartItems.length === 0) {
@@ -60,7 +60,20 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 			]);
 		} else {
 			cartItems.filter((cartItem, index) => {
-				if (cartItem.itemId === item.id && cartItems.length != 0) {
+				if (cartItem.itemId != item.id) {
+					setCartItems([
+						...cartItems,
+						{
+							itemImg: item.img,
+							itemName: item.itemName,
+							itemPrice: item.price,
+							itemDesc: item.Desc,
+							itemQnt: 1,
+							itemId: item.id,
+						},
+					]);
+				} else {
+					//if (cartItem.itemId === item.id) {
 					setCartItems((prevState) => {
 						//console.log(prevState[index].itemId);
 						if (prevState[index].itemId === cartItem.itemId) {
@@ -68,25 +81,39 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 						}
 						return prevState;
 					});
-				} else {
+					//}
 				}
-				/* 				setCartItems([
-					...cartItems,
-					{
-						itemImg: item.img,
-						itemName: item.itemName,
-						itemPrice: item.price,
-						itemDesc: item.Desc,
-						itemQnt: 1,
-						itemId: item.id,
-					},
-				]); */
 			});
 		}
-		setCartItems((state) => {
+
+		/* cartItems.filter((cartItem, index) => {
+			if (cartItem.itemId === item.id && cartItems.length != 0) {
+				setCartItems((prevState) => {
+					//console.log(prevState[index].itemId);
+					if (prevState[index].itemId === cartItem.itemId) {
+						prevState[index].itemQnt++;
+					}
+					return prevState;
+				});
+			} else {
+			}
+			 				setCartItems([
+				...cartItems,
+				{
+					itemImg: item.img,
+					itemName: item.itemName,
+					itemPrice: item.price,
+					itemDesc: item.Desc,
+					itemQnt: 1,
+					itemId: item.id,
+				},
+			]); 
+		}); */
+
+		/* 		setCartItems((state) => {
 			console.log(state);
 			return state;
-		});
+		}); */
 		//setCartItems(item.img);
 		//console.log(cartItems);
 	};

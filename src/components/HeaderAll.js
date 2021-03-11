@@ -5,8 +5,22 @@ import { ContainerDiv } from "../styles/styles";
 import EmptyCart from "../img/empty_cart.svg";
 import FullCart from "../img/full_cart.svg";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const HeaderAll = () => {
+const HeaderAll = ({ cartItems, cartItemSize }) => {
+	console.log(cartItems);
+	const [cartImg, setCartImg] = useState(EmptyCart);
+
+	/* 	const cartCheck = (icon) => {
+		console.log("cart is not emty");
+		return icon;
+	}; */
+
+	useEffect(() => {
+		setCartImg(FullCart);
+		//console.log("cxcxc");
+	}, [cartItems]);
+
 	return (
 		<HeaderDiv>
 			<ContainerDiv>
@@ -15,7 +29,7 @@ const HeaderAll = () => {
 					<Nav />
 					<Cart>
 						<Link to="/cartshop">
-							<img src={EmptyCart} alt="" />
+							<img src={cartImg} alt="" />
 						</Link>
 					</Cart>
 				</HeaderMenu>

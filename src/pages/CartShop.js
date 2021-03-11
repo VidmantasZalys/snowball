@@ -9,7 +9,7 @@ const CartShop = ({ cartItems, setCartItems }) => {
 
 	return (
 		<div>
-			<HeaderAll />
+			<HeaderAll cartItems={cartItems} />
 			<CartItemsList cartItems={cartItems} setCartItems={setCartItems} />
 		</div>
 	);
