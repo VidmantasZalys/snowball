@@ -45,7 +45,7 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 			} */
 		//});
 		//console.log(cartItems.length);
-		setCartItems([
+		/* 		setCartItems([
 			...cartItems,
 			{
 				itemImg: item.img,
@@ -55,9 +55,76 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 				itemQnt: 1,
 				itemId: item.id,
 			},
-		]);
+		]); */
 
-		/* 	if (cartItems.length === 0) {
+		if (cartItems.length === 0) {
+			console.log(`is item: ${item.id} kai arr ne 0`);
+			setCartItems([
+				...cartItems,
+				{
+					itemImg: item.img,
+					itemName: item.itemName,
+					itemPrice: item.price,
+					itemDesc: item.Desc,
+					itemQnt: 1,
+					itemId: item.id,
+				},
+			]);
+		} else {
+			for (let i = 0; i < cartItems.length; i++) {
+				if (cartItems[i].itemId === item.id) {
+					console.log(
+						`kai fora id tynk item id is filtra: ${cartItems[i].itemId}, is item ${item.id}`
+					);
+					setCartItems((prevState) => {
+						//console.log(prevState[index].itemId);
+						if (prevState[i].itemId === item.id) {
+							prevState[i].itemQnt++;
+						}
+						return prevState;
+					});
+					break;
+				} else if (cartItems[i].itemId !== item.id) {
+					console.log(
+						`kai fora id netynk item id is filtra: ${cartItems[i].itemId}, is item ${item.id}`
+					);
+					//if (cartItem.itemId === item.id) {
+
+					//}
+
+					setCartItems([
+						...cartItems,
+						{
+							itemImg: item.img,
+							itemName: item.itemName,
+							itemPrice: item.price,
+							itemDesc: item.Desc,
+							itemQnt: 1,
+							itemId: item.id,
+						},
+					]);
+					break;
+				} else if (
+					cartItems[i + 1].itemId === item.id &&
+					cartItems.length !== 0
+				) {
+					console.log(
+						`kai fora id tynk item id is filtra, bet +1: ${cartItems[i].itemId}, is item ${item.id}`
+					);
+					setCartItems((prevState) => {
+						//console.log(prevState[index].itemId);
+						if (prevState[i + 1].itemId === item.id) {
+							prevState[i + 1].itemQnt++;
+						}
+						return prevState;
+					});
+					break;
+				}
+			}
+		}
+
+		/* if (cartItems.length === 0) {
+			console.log(`is item: ${item.id} kai arr ne 0`);
 			setCartItems([
 				...cartItems,
 				{
@@ -71,7 +138,25 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 			]);
 		} else {
 			cartItems.filter((cartItem, index) => {
-				if (cartItem.itemId != item.id) {
+				if (cartItem.itemId === item.id) {
+					console.log(
+						`kai filtra id tynk item id is filtra: ${cartItem.itemId}, is item ${item.id}`
+					);
+					setCartItems((prevState) => {
+						//console.log(prevState[index].itemId);
+						if (prevState[index].itemId === item.id) {
+							prevState[index].itemQnt++;
+						}
+						return prevState;
+					});
+				} else {
+					console.log(
+						`kai filtra id netynk item id is filtra: ${cartItem.itemId}, is item ${item.id}`
+					);
+					//if (cartItem.itemId === item.id) {
+
+					//}
+
 					setCartItems([
 						...cartItems,
 						{
@@ -83,16 +168,6 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 							itemId: item.id,
 						},
 					]);
-				} else {
-					//if (cartItem.itemId === item.id) {
-					setCartItems((prevState) => {
-						//console.log(prevState[index].itemId);
-						if (prevState[index].itemId === cartItem.itemId) {
-							prevState[index].itemQnt++;
-						}
-						return prevState;
-					});
-					//}
 				}
 			});
 		} */
@@ -121,10 +196,11 @@ const StoreItem = ({ item, setCartItems, cartItems }) => {
 			]); 
 		}); */
 
-		/* 		setCartItems((state) => {
+		setCartItems((state) => {
+			console.log(`updatina state cartItems`);
 			console.log(state);
 			return state;
-		}); */
+		});
 		//setCartItems(item.img);
 		//console.log(cartItems);
 	};

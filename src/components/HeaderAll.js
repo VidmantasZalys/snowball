@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const HeaderAll = ({ cartItems, cartItemSize }) => {
-	console.log(cartItems);
+	//console.log(cartItems);
 	const [cartImg, setCartImg] = useState(EmptyCart);
 	const [cartSize, setCartSize] = useState(cartItems.length);
 

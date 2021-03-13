@@ -5,8 +5,22 @@ import EmptyCart from "../../img/empty_cart.svg";
 import FullCart from "../../img/full_cart.svg";
 import { ContainerDiv } from "../../styles/styles";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
+	//const qnt = 0;
+	//const snowBalls = 456;
+	let rndDashBoardQnt = Math.floor(Math.random() * Math.floor(345));
+	const melted = 1234;
+	const ballSent = 1500;
+	const constumers = 3000;
+	const [dashBoardQnt, setDashBoardQnt] = useState(rndDashBoardQnt);
+
+	setTimeout(() => {
+		setDashBoardQnt(dashBoardQnt + Math.floor(Math.random() * Math.floor(10)));
+		//return snowBalls;
+	}, 5000);
+
 	return (
 		<HeaderDiv>
 			<ContainerDiv>
@@ -33,21 +47,21 @@ const Header = () => {
 						<InfoBox>
 							<InfoBoxRow>
 								<InfoBoxCell>
-									<h1>4343434</h1>
+									<h1>{dashBoardQnt}</h1>
 									<p>snow balls produced</p>
 								</InfoBoxCell>
 								<InfoBoxCell>
-									<h1>44444</h1>
+									<h1>{dashBoardQnt}</h1>
 									<p>snow balls sent</p>
 								</InfoBoxCell>
 							</InfoBoxRow>
 							<InfoBoxRow>
 								<InfoBoxCell>
-									<h1>1234</h1>
+									<h1>{dashBoardQnt}</h1>
 									<p>melted on shipping</p>
 								</InfoBoxCell>
 								<InfoBoxCell>
-									<h1>3456</h1>
+									<h1>{dashBoardQnt}</h1>
 									<p>costumers</p>
 								</InfoBoxCell>
 							</InfoBoxRow>
